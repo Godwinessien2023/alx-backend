@@ -39,7 +39,8 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Returns a dictionary with pagination information."""
         # Assert that the index is within a valid range
-        assert isinstance(index, int) and 0 <= index < len(self.indexed_dataset())
+        assert isinstance(index, int) and 0 <= index < len
+        (self.indexed_dataset())
 
         data = self.indexed_dataset()
         data_keys = sorted(data.keys())  # Get the sorted list of indices
