@@ -52,5 +52,5 @@ class Server:
         # at the start_index and end_index)
         if start_index >= len(data):
             return []
-        
+
         return data[start_index:end_index]
