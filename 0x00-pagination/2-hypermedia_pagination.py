@@ -54,13 +54,13 @@ class Server:
             return []
 
         return data[start_index:end_index]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
         """ returns a dictionary with key-value pairs
         """
         data = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
-        
+
         return {
             "page_size": len(data),
             "page": page,
